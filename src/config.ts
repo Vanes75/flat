@@ -7,6 +7,8 @@ export type FormatEnum = z.infer<typeof FormatEnum>
 const CommonConfigSchema = z.object({
   downloaded_filename: z.string(),
   postprocess: z.string().optional(),
+  create_pull_request: z.string().optional(),
+  token: z.string().optional(),
 })
 export type CommonConfig = z.infer<typeof CommonConfigSchema>
 
@@ -37,6 +39,7 @@ export function getConfig(): Config {
   const keys = [
     'axios_config',
     'downloaded_filename',
+    'create_pull_request',
     'http_url',
     'authorization',
     'mask',

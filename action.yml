@@ -2,6 +2,14 @@ name: 'Flat Data'
 description: 'The GitHub action which powers data fetching for Flat'
 author: 'GitHub OCTO'
 inputs:
+  create_pull_request:
+    description: 'A boolean indicating whether to create a pull request for the changes.'
+    required: false
+    default: false
+  token:
+    description: 'A Github personal access token.'
+    required: false
+    default: ${{ github.token }}
   axios_config:
     description: 'A path (relative to the root of your repo) of a JSON file containing a subset of Axios configuration'
     required: false
