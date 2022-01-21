@@ -1,0 +1,19 @@
+name: Download AWS IP ranges
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Fetch data
+        uses: flavianmissi/flat@create-PR
+        with:
+          create_pull_request: true
+          http_url: https://ip-ranges.amazonaws.com/ip-ranges.json
+          downloaded_filename: util/ipresolver/aws-ip-ranges.json
+
