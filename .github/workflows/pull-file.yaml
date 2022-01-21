@@ -15,5 +15,5 @@ jobs:
         with:
           create_pull_request: true
           http_url: https://ip-ranges.amazonaws.com/ip-ranges.json
-          downloaded_filename: util/ipresolver/aws-ip-ranges.json
+          downloaded_filename: aws-ip-ranges.json
 
